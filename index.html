@@ -19,12 +19,25 @@
 				<li><button id="new-todo" class="btn-create">Todo</button></li>
 			</ul>
 		</header>
-		<main class="document"></main>
+		<main class="js-document">
+		</main>
 		<footer class="footer">
 			<p>
 				© Copyright by Dream Coding Academy. All rights reserved.
 			</p>
 		</footer>
 	</div>
+
+	<script>
+		const template = document.querySelector('template');
+		template.innerHTML = '굿';
+		console.log('template', template);
+		// const template = document.createElement('template');
+		// const div = document.createElement("div");
+		// div.innerHTML = `<h1>안녕</h1>`;
+		// // console.log('div', div);
+		// template.appendChild(div);
+		// document.querySelector('.document').appendChild(template);
+	</script>
 </body>
 </html>
