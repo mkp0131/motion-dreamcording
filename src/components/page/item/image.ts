@@ -3,7 +3,7 @@ import { BaseComponent } from "../../component.js";
 
 
 
-export class ImageComponent extends BaseComponent<HTMLImageElement> {
+export class ImageComponent extends BaseComponent<HTMLElement> {
 
 	constructor(url: string, title: string) {
 		super(`<section class="image">
