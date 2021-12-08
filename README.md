@@ -37,3 +37,9 @@
 ## 2021-11-25
 1. video, note, todo 컴포넌트 생성
 2. video: youtube 링크, note: 단순한 메모, todo: checkbox 리스트
+
+## 2021-12-08
+1. 컴포넌트들을 감쌀 pageItemComponent 생성(page.ts에 작성)
+2. pageItemComponent 은 addChild() 라는 메소드가 있다.
+3. appChild 는 BaseComponent 를 받아서 BaseComponent 의 attachTo 메소드를 사용 pageItemComponent 에 붙여넣기
+4. 기존 PageComponent 컴포넌트에도 addChild() 메소드를 생성 addChild 에서 받아온 컴포넌트를 PageItemComponent 에 붙여넣기하고, this.element에 PageItemComponent을 붙여넣기.
