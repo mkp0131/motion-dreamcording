@@ -4,6 +4,7 @@
 
 export interface IBaseComponent {
 	attachTo(parent: HTMLElement, position?: InsertPosition): void;
+	removeForm(parent: HTMLElement): void;
 }
 
 
@@ -21,4 +22,11 @@ export class BaseComponent<T extends HTMLElement> implements IBaseComponent {
 		parent.insertAdjacentElement(position, this.element);
 	}
 	
+	removeForm(parent: HTMLElement) {
+		if(parent !== this.element.parentElement) {
+			throw new Error("Parent mismatching!!");
+		}
+		parent.removeChild(this.element);
+	}
+
 }

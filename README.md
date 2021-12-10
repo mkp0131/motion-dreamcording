@@ -43,3 +43,12 @@
 2. pageItemComponent 은 addChild() 라는 메소드가 있다.
 3. appChild 는 BaseComponent 를 받아서 BaseComponent 의 attachTo 메소드를 사용 pageItemComponent 에 붙여넣기
 4. 기존 PageComponent 컴포넌트에도 addChild() 메소드를 생성 addChild 에서 받아온 컴포넌트를 PageItemComponent 에 붙여넣기하고, this.element에 PageItemComponent을 붙여넣기.
+
+
+## 2021-12-10
+1. 컴포넌트 삭제 버튼 생성
+2. PageItemComponent 에서는 자신한테 붙인 컴포넌트를 삭제를 하지 못한다.
+3. BaseComponent 자기자신을 삭제하는 removeForm 메소드 생성
+4. PageItemComponent 의 .close 에 .onclick 이벤트 를 생성
+5. PageItemComponent 에 components 에서 받아온 removeFrom 함수를 멤버변수에 넣고 실행할수있도록 하는 setBtnCloseOnClick 메소드 생성
+5. PageItemComponent 을 정의하는 PageComponent 에서 setBtnCloseOnClick 사용
